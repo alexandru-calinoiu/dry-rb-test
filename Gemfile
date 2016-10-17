@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'dry-equalizer'
+gem 'dry-types'
+gem 'dry-struct'
 
 group :development do
   gem 'rubocop', require: false

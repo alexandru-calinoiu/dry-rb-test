@@ -1,19 +1,16 @@
 # frozen_string_literal: true
 require 'dry/equalizer'
+require 'dry/struct'
 
 module Dry
   module Test
     module Dtos
-      class Article
+      class Article < Dry::Struct
         include Dry::Equalizer(:id, :title, :body)
 
-        attr_reader :id, :title, :body
-
-        def initialize(id, title, body)
-          @id = id
-          @title = title
-          @body = body
-        end
+        attribute :id, Dry::Test::Types::Int
+        attribute :title, Dry::Test::Types::String
+        attribute :body, Dry::Test::Types::String
       end
     end
   end
