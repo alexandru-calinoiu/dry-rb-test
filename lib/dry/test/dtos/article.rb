@@ -5,7 +5,7 @@ require 'dry/struct'
 module Dry
   module Test
     module Dtos
-      class Article < Dry::Struct
+      class Article < Dry::Struct::Value
         include Dry::Equalizer(:id, :title, :body)
 
         attribute :id, Dry::Test::Types::Int
