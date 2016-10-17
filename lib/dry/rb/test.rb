@@ -1,4 +1,5 @@
-require "dry/rb/test/version"
+# frozen_string_literal: true
+require 'dry/rb/test/version'
 
 module Dry
   module Rb
