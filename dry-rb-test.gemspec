@@ -2,13 +2,13 @@
 # frozen_string_literal: true
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'dry/rb/test/version'
+require 'dry/test/version'
 
 Gem::Specification.new do |spec|
   raise 'RubyGems 2.0 or newer is required to protect against public gem pushes.' unless spec.respond_to?(:metadata)
 
   spec.name          = 'dry-rb-test'
-  spec.version       = Dry::Rb::Test::VERSION
+  spec.version       = Dry::Test::VERSION
   spec.authors       = ['Calin']
   spec.email         = ['calinoiu.alexandru@agilefreaks.com']
 
