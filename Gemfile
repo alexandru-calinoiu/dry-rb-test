@@ -7,6 +7,7 @@ gemspec
 gem 'dry-equalizer'
 gem 'dry-types'
 gem 'dry-struct'
+gem 'dry-component'
 
 group :development do
   gem 'rubocop', require: false
