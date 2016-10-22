@@ -2,7 +2,9 @@
 require 'spec_helper'
 
 RSpec.describe Dry::Test::Commands::CreateArticle do
-  subject(:create_article) { described_class.new(validate, persist) }
+  subject(:create_article) do
+    described_class.new(validate, persist)
+  end
 
   let(:validate) do
     -> (input) { double('result', success?: !input[:title].empty?) }

@@ -1,9 +1,11 @@
 # frozen_string_literal: true
+require 'dry/container/stub'
+
 module Dry
   module Test
     module Commands
       class CreateArticle
-        include Dry::Test::AutoInject[:validate_articles, :persist_articles]
+        include Dry::Test::Import['dry.test.commands.validate_articles', 'dry.test.commands.persist_articles']
 
         def call(params)
           result = validate_articles.call(params)
