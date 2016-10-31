@@ -3,7 +3,7 @@ require 'spec_helper'
 
 RSpec.describe Dry::Test::Commands::CreateArticle do
   subject(:create_article) do
-    described_class.new(validate, persist)
+    described_class.new(validate_articles: validate, persist_articles: persist)
   end
 
   let(:validate) do
